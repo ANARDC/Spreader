@@ -20,7 +20,8 @@ final class StartConfigurator: StartConfiguratorProtocol {
                            deleteButton: PublishSubject<Void>(),
                            networkAccess: PublishSubject<Bool>())
     
-    let output = StartOutput(output: PublishSubject<Result<Spreadsheet, RequestError>>(), availability: PublishSubject<Bool>())
+    let output = StartOutput(output: PublishSubject<Result<Spreadsheet, RequestError>>(),
+                             availability: PublishSubject<Bool>())
     
     let startViewUIFactory = StartViewUIFactory(view: view)
     

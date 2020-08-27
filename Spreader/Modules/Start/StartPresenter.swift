@@ -13,8 +13,6 @@ final class StartPresenter: StartViewPresenterProtocol {
   var interactor        : StartInteractorProtocol!
   var router            : StartRouterProtocol!
   var uiFactory         : StartUI!
-  var loaderManager     : Loader!
-  var alertManager      : Alert!
   var reactiveBinder    : StartViewReactiveBinder!
   var reactiveProcessor : StartViewReactiveProcessor!
   
@@ -29,7 +27,6 @@ final class StartPresenter: StartViewPresenterProtocol {
     
     self.input  = input
     self.output = output
-    
   }
 }
 
