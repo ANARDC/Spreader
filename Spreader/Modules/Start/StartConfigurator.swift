@@ -30,8 +30,8 @@ final class StartConfigurator: StartConfiguratorProtocol {
     let reactiveBinder = SVReactiveBinder(view: view, presenter: self.presenter)
     let reactiveProcessor = SVReactiveProcessor(view: view, presenter: self.presenter)
     reactiveProcessor.uiFactory     = startViewUIFactory
-    reactiveProcessor.alertManager  = AlertManager(view: view)
-    reactiveProcessor.loaderManager = LoaderManager(view: view)
+    reactiveProcessor.alertManager  = SVAlertManager(view: view)
+    reactiveProcessor.loaderManager = SVLoaderManager(view: view)
     
     self.interactor = StartInteractor(NetworkService(), DataService())
     self.router     = StartRouter()

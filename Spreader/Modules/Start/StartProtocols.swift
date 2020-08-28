@@ -37,9 +37,9 @@ protocol Loader {
   func stopLoader()
 }
 
-protocol Alert {
+@objc protocol Alert {
   func makeOperationAlert(forState isSuccess: Bool)
-  func makeDeleteOperationAlert()
+  @objc optional func makeDeleteOperationAlert()
 }
 
 protocol StartViewReactiveBinder {

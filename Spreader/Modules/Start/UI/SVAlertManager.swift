@@ -1,5 +1,5 @@
 //
-//  AlertManager.swift
+//  SVAlertManager.swift
 //  Spreader
 //
 //  Created by Anar on 27.08.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertManager: Alert {
+class SVAlertManager: Alert {
   private weak var view: StartView!
   
   init(view: StartView) {

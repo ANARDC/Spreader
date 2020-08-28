@@ -21,7 +21,7 @@ final class StartPresenter: StartViewPresenterProtocol {
   
   let bag = DisposeBag()
   
-  init(_ view: StartView, _ uiFactory: StartViewUIFactory, _ input: StartInput, _ output: StartOutput) {
+  init(_ view: StartView, _ uiFactory: StartUI, _ input: StartInput, _ output: StartOutput) {
     self.view      = view
     self.uiFactory = uiFactory
     

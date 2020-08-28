@@ -1,5 +1,5 @@
 //
-//  LoaderManager.swift
+//  SVLoaderManager.swift
 //  Spreader
 //
 //  Created by Anar on 27.08.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoaderManager: Loader {
+class SVLoaderManager: Loader {
   private weak var view: StartView!
   
   init(view: StartView) {

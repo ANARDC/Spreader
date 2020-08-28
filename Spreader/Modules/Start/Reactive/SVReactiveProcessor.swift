@@ -66,7 +66,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
     self.presenter.input.deleteButton
       .subscribe(onNext: {
         self.presenter.interactor.deleteSpreadsheet()
-        self.alertManager?.makeDeleteOperationAlert()
+        self.alertManager?.makeDeleteOperationAlert?()
       })
       .disposed(by: self.bag)
   }

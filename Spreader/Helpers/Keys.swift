@@ -6,4 +6,4 @@
 //  Copyright © 2020 Commodo. All rights reserved.
 //
 
-let apiKey = "<Google Sheets API Key>"
+let apiKey = "<Your Google Sheets API Key>"
