@@ -6,9 +6,7 @@
 //  Copyright © 2020 Commodo. All rights reserved.
 //
 
-import SnapKit
-import RxSwift
-import RxCocoa
+import UIKit
 
 final class StartViewController: UIViewController, StartView {
   var configurator : StartConfiguratorProtocol?
@@ -20,8 +18,6 @@ final class StartViewController: UIViewController, StartView {
   var downloadButton : DownloadButton?
   var deleteButton   : DeleteButton?
   var loaderView     : LoaderView?
-  
-  let bag = DisposeBag()
 }
 
 extension StartViewController {

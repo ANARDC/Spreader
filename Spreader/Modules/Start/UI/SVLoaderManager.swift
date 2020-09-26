@@ -15,7 +15,7 @@ class SVLoaderManager: Loader {
     self.view = view
   }
   
-  func startLoader() {
+  func start() {
     self.view.loaderView = LoaderView(superview: self.view.view) { view in
       view.indicator.startAnimating()
       
@@ -25,7 +25,7 @@ class SVLoaderManager: Loader {
     }
   }
   
-  func stopLoader() {
+  func stop() {        
     self.view.loaderView?.indicator.stopAnimating()
     self.view.loaderView?.removeFromSuperview()
   }

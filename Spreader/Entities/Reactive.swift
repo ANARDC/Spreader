@@ -17,6 +17,6 @@ struct StartInput {
 }
 
 struct StartOutput {
-  let output       : PublishSubject<Result<Spreadsheet, RequestError>>
+  let result       : PublishSubject<Result<Spreadsheet, RequestError>>
   let availability : PublishSubject<Bool>
 }

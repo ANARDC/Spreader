@@ -23,7 +23,6 @@ final class SpreadsheetViewController: UITableViewController {
   override func loadView() {
     super.loadView()
     self.navigationController?.navigationBar.barStyle = .blackTranslucent
-    
     self.tableView.backgroundColor = UIColor.gray
     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
   }
@@ -54,23 +53,22 @@ extension SpreadsheetViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell      = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
-    let value     = self.spreadsheet?.values?.compactMap { $0 } [indexPath.section]
-    let `default` = RequestError().description
-    
-    let strings = [
-      "Language From: \(value?.langFrom ?? `default`)",
-      "Language To: \(value?.langTo ?? `default`)",
-      "Text: \(value?.text ?? `default`)",
-      "Translate: \(value?.translate ?? `default`)"
-    ]
-    
-    cell.textLabel?.text          = strings[indexPath.row]
-    cell.backgroundColor          = UIColor.darkGray
-    cell.textLabel?.textColor     = .white
-    cell.textLabel?.numberOfLines = 0
-    cell.isUserInteractionEnabled = false
-    
-    return cell
+    tableView.dequeueReusableCell(with: "cellID", for: indexPath) { [weak self] cell in
+      let value     = self?.spreadsheet?.values?.compactMap { $0 } [indexPath.section]
+      let `default` = RequestError().description
+      
+      let strings = [
+        "Language From: \(value?.langFrom ?? `default`)",
+        "Language To: \(value?.langTo ?? `default`)",
+        "Text: \(value?.text ?? `default`)",
+        "Translate: \(value?.translate ?? `default`)"
+      ]
+      
+      cell.backgroundColor          = UIColor.darkGray
+      cell.textLabel?.text          = strings[indexPath.row]
+      cell.textLabel?.textColor     = .white
+      cell.textLabel?.numberOfLines = 0
+      cell.isUserInteractionEnabled = false
+    }
   }
 }

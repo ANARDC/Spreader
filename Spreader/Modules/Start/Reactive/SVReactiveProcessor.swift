@@ -27,7 +27,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
     Observable
       .combineLatest(self.presenter.input.link, self.presenter.input.networkAccess)
       .subscribe(onNext: { link, networkAccess in
-        let regex = try! NSRegularExpression(pattern: "https://docs.google.com/spreadsheets/d/([a-zA-Z0-9-_]+)/edit[#&]gid=([0-9]+)", options: .caseInsensitive)
+        let regex = try! NSRegularExpression(pattern: "https://docs.google.com/spreadsheets/d/([a-zA-Z0-9-_]+)/edit[#&]gid=([0-9]+)")
         let linkIsValid = (regex.firstMatch(in: link, options: [], range: NSRange(location: 0, length: link.count)) != nil)
         
         self.presenter.output.availability.onNext(networkAccess && linkIsValid)
@@ -38,7 +38,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
   func makeDownloadButtonSubscriber() {
     self.presenter.input.downloadButton
       .subscribeOn(MainScheduler.instance)
-      .do(onNext: { self.loaderManager?.startLoader() })
+      .do(onNext: { self.loaderManager?.start() })
       .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
       .withLatestFrom(self.presenter.input.link)
       .flatMapLatest { self.presenter.interactor.makeRequest(with: $0).materialize() }
@@ -46,7 +46,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
       .subscribe(onNext: { event in
         switch event {
           case let .next(result):
-            self.presenter.output.output.onNext(result)
+            self.presenter.output.result.onNext(result)
           default:
             return
         }
@@ -56,6 +56,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
   
   func makeShowButtonSubscriber() {
     self.presenter.input.showButton
+      .subscribeOn(MainScheduler.instance)
       .subscribe(onNext: {
         self.presenter.router.goToSpreadsheetScreen(from: self.view, with: self.presenter.interactor.spreadsheet)
       })
@@ -64,6 +65,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
   
   func makeDeleteButtonSubscriber() {
     self.presenter.input.deleteButton
+      .subscribeOn(MainScheduler.instance)
       .subscribe(onNext: {
         self.presenter.interactor.deleteSpreadsheet()
         self.alertManager?.makeDeleteOperationAlert?()
@@ -72,9 +74,9 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
   }
   
   func makeOutputSubscriber() {
-    self.presenter.output.output
+    self.presenter.output.result
       .subscribe(onNext: { result in
-        self.loaderManager?.stopLoader()
+        self.loaderManager?.stop()
         switch result {
           case .success(let spreadsheet):
             spreadsheet.values?
@@ -82,9 +84,9 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
               .forEach { row in
                 self.presenter.interactor.saveSpreadsheetRow(for: row)
             }
-            self.alertManager?.makeOperationAlert(forState: true)
+            self.alertManager?.makeSaveOperationAlert(forState: true)
           case .failure:
-            self.alertManager?.makeOperationAlert(forState: false)
+            self.alertManager?.makeSaveOperationAlert(forState: false)
         }
       })
       .disposed(by: self.bag)

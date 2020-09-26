@@ -10,13 +10,13 @@
 		9941E9C724F43ECA00EE04D0 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9C624F43ECA00EE04D0 /* Reactive.swift */; };
 		9941E9D324F4533900EE04D0 /* SpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9CD24F4533900EE04D0 /* SpreadsheetView.swift */; };
 		9941E9D624F459B200EE04D0 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9D524F459B200EE04D0 /* RequestError.swift */; };
-		9941E9D824F45EF500EE04D0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9D724F45EF500EE04D0 /* Request.swift */; };
 		9941E9DA24F5378400EE04D0 /* StartViewUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9D924F5378400EE04D0 /* StartViewUIFactory.swift */; };
 		9941E9DE24F701FA00EE04D0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9941E9DD24F701FA00EE04D0 /* Keys.swift */; };
 		995E19C624F7F0380058AA57 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E19C524F7F0380058AA57 /* NavigationController.swift */; };
 		995E19C824F8008F0058AA57 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E19C724F8008F0058AA57 /* LoaderView.swift */; };
 		995E19CC24F806150058AA57 /* SVLoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E19CB24F806150058AA57 /* SVLoaderManager.swift */; };
 		995E19CE24F807B10058AA57 /* SVAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995E19CD24F807B10058AA57 /* SVAlertManager.swift */; };
+		99739B7C25062B1E007FFC53 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99739B7B25062B1E007FFC53 /* UITableView.swift */; };
 		997CB9BB24F2A7D1004A1816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CB9BA24F2A7D1004A1816 /* AppDelegate.swift */; };
 		997CB9C424F2A7D2004A1816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997CB9C324F2A7D2004A1816 /* Assets.xcassets */; };
 		997CB9C724F2A7D2004A1816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997CB9C524F2A7D2004A1816 /* LaunchScreen.storyboard */; };
@@ -47,13 +47,13 @@
 		9941E9C624F43ECA00EE04D0 /* Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		9941E9CD24F4533900EE04D0 /* SpreadsheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadsheetView.swift; sourceTree = "<group>"; };
 		9941E9D524F459B200EE04D0 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		9941E9D724F45EF500EE04D0 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9941E9D924F5378400EE04D0 /* StartViewUIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewUIFactory.swift; sourceTree = "<group>"; };
 		9941E9DD24F701FA00EE04D0 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		995E19C524F7F0380058AA57 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		995E19C724F8008F0058AA57 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		995E19CB24F806150058AA57 /* SVLoaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVLoaderManager.swift; sourceTree = "<group>"; };
 		995E19CD24F807B10058AA57 /* SVAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVAlertManager.swift; sourceTree = "<group>"; };
+		99739B7B25062B1E007FFC53 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		997CB9B724F2A7D1004A1816 /* Spreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997CB9BA24F2A7D1004A1816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		997CB9C324F2A7D2004A1816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,7 +191,6 @@
 				99EF428524F3E56900A434A6 /* Spreadsheet.swift */,
 				9941E9C624F43ECA00EE04D0 /* Reactive.swift */,
 				9941E9D524F459B200EE04D0 /* RequestError.swift */,
-				9941E9D724F45EF500EE04D0 /* Request.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -224,6 +223,7 @@
 				99EF429524F4003900A434A6 /* UIColor.swift */,
 				9941E9DD24F701FA00EE04D0 /* Keys.swift */,
 				995E19C524F7F0380058AA57 /* NavigationController.swift */,
+				99739B7B25062B1E007FFC53 /* UITableView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -366,7 +366,6 @@
 				995E19C824F8008F0058AA57 /* LoaderView.swift in Sources */,
 				997CB9BB24F2A7D1004A1816 /* AppDelegate.swift in Sources */,
 				99EF429A24F4199A00A434A6 /* DownloadButton.swift in Sources */,
-				9941E9D824F45EF500EE04D0 /* Request.swift in Sources */,
 				99EF427F24F2DDF100A434A6 /* StartRouter.swift in Sources */,
 				995E19CE24F807B10058AA57 /* SVAlertManager.swift in Sources */,
 				99EF428124F2DDF100A434A6 /* StartInteractor.swift in Sources */,
@@ -383,6 +382,7 @@
 				995E19CC24F806150058AA57 /* SVLoaderManager.swift in Sources */,
 				99EF429124F3F2BD00A434A6 /* LogoImageView.swift in Sources */,
 				9941E9D624F459B200EE04D0 /* RequestError.swift in Sources */,
+				99739B7C25062B1E007FFC53 /* UITableView.swift in Sources */,
 				99EF428824F3E60E00A434A6 /* GoogleResponse.swift in Sources */,
 				99EF427E24F2DDF100A434A6 /* StartPresenter.swift in Sources */,
 				9941E9DA24F5378400EE04D0 /* StartViewUIFactory.swift in Sources */,

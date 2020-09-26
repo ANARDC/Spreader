@@ -16,12 +16,16 @@ class DataService {
     print(Realm.Configuration.defaultConfiguration.fileURL ?? "Realm Configuration File Cannot Be Found")
   }
   
-  func saveSpreadsheetRow(for entity: SpreadsheetRow) {
+  fileprivate func extractedFunc(_ entity: SpreadsheetRow) {
     DispatchQueue.main.async {
       try? self.realm?.write {
         self.realm?.add(entity)
       }
     }
+  }
+  
+  func saveSpreadsheetRow(for entity: SpreadsheetRow) {
+    extractedFunc(entity)
   }
   
   func deleteSpreadsheet() {

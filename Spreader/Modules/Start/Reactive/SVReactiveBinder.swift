@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class SVReactiveBinder: StartViewReactiveBinder {
   private weak var view      : StartView!

@@ -1,9 +1,9 @@
 PODS:
-  - Realm (4.4.1):
-    - Realm/Headers (= 4.4.1)
-  - Realm/Headers (4.4.1)
-  - RealmSwift (4.4.1):
-    - Realm (= 4.4.1)
+  - Realm (5.0.3):
+    - Realm/Headers (= 5.0.3)
+  - Realm/Headers (5.0.3)
+  - RealmSwift (5.0.3):
+    - Realm (= 5.0.3)
   - RuntimeNew (2.1.5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -12,8 +12,8 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SnapKit (5.0.1)
-  - Unrealm (1.3.2):
-    - RealmSwift (= 4.4.1)
+  - Unrealm (1.3.5):
+    - RealmSwift (= 5.0.3)
     - RuntimeNew (= 2.1.5)
 
 DEPENDENCIES:
@@ -35,15 +35,15 @@ SPEC REPOS:
     - Unrealm
 
 SPEC CHECKSUMS:
-  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
-  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
+  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
+  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
   RuntimeNew: ef34cf1783be4c1cbe798970bc590924dab5df87
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  Unrealm: 96b011e441fcd0a51d749f14b140056a70610f0e
+  Unrealm: ba1c168935344084ba28dd6bff5ded86f4837d7f
 
 PODFILE CHECKSUM: d859e5ff0892351132ca4f6c0f1d4fd915db0782
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0.rc.1

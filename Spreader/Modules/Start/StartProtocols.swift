@@ -33,12 +33,12 @@ protocol StartUI {
 }
 
 protocol Loader {
-  func startLoader()
-  func stopLoader()
+  func start()
+  func stop()
 }
 
 @objc protocol Alert {
-  func makeOperationAlert(forState isSuccess: Bool)
+  func makeSaveOperationAlert(forState isSuccess: Bool)
   @objc optional func makeDeleteOperationAlert()
 }
 

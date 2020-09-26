@@ -6,8 +6,6 @@
 //  Copyright © 2020 Commodo. All rights reserved.
 //
 
-import RxSwift
-
 final class StartPresenter: StartViewPresenterProtocol {
   weak var view         : StartView!
   var interactor        : StartInteractorProtocol!
@@ -18,8 +16,6 @@ final class StartPresenter: StartViewPresenterProtocol {
   
   let input  : StartInput
   let output : StartOutput
-  
-  let bag = DisposeBag()
   
   init(_ view: StartView, _ uiFactory: StartUI, _ input: StartInput, _ output: StartOutput) {
     self.view      = view
