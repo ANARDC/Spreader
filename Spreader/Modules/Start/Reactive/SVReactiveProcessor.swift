@@ -83,7 +83,7 @@ class SVReactiveProcessor: StartViewReactiveProcessor {
               .compactMap { $0 }
               .forEach { row in
                 self.presenter.interactor.saveSpreadsheetRow(for: row)
-            }
+              }
             self.alertManager?.makeSaveOperationAlert(forState: true)
           case .failure:
             self.alertManager?.makeSaveOperationAlert(forState: false)

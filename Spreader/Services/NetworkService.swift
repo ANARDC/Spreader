@@ -36,12 +36,12 @@ class NetworkService {
                 .values
                 .map {
                   SpreadsheetRow(langFrom: $0[0], langTo: $0[1], text: $0[2], translate: $0[3])
-              }
+                }
             )
           )
         } catch {
           return .failure(RequestError())
         }
-    }
+      }
   }
 }
